@@ -8,6 +8,8 @@ import {
   Relation,
   JoinColumn,
   OneToMany,
+  CreateDateColumn,
+  UpdateDateColumn,
 } from 'typeorm';
 
 @Entity()
@@ -27,6 +29,12 @@ export class User {
   @Column({ default: true })
   isActive: boolean;
 
+  @CreateDateColumn()
+  createdAt: Date;
+
+  @UpdateDateColumn()
+  updatedAt: Date;
+  
   @OneToOne(() => Profile)
   @JoinColumn()
   profile: Relation<Profile>;

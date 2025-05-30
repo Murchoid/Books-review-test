@@ -19,7 +19,7 @@ export class Profile {
   avatar: string;
 
   @Column({ nullable: true })
-  dateOfBirth: string;
+  dateOfBirth: Date;
 
   @Column({ nullable: true })
   location: string;

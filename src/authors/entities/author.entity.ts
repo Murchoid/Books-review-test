@@ -23,7 +23,7 @@ export class Author {
   birthDate: Date;
 
   @Column()
-  isActive: true;
+  isActive: boolean;
 
   @OneToMany(() => Book, (book) => book.author)
   @JoinColumn()

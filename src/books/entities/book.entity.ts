@@ -24,7 +24,7 @@ export class Book {
   description: string;
 
   @Column()
-  publicationYear: Date;
+  publicationYear: string;
 
   @Column({ default: true })
   isAvailable: boolean;
