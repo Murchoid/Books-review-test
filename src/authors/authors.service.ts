@@ -10,8 +10,8 @@ import { Author } from './entities/author.entity';
 export class AuthorsService {
   constructor(
     @InjectRepository(Author)
-    private authorRepository: Repository<AuthorsModule>
-){}
+    private authorRepository: Repository<AuthorsModule>,
+  ) {}
 
   create(createAuthorDto: CreateAuthorDto) {
     return this.authorRepository.save(createAuthorDto);
@@ -23,7 +23,7 @@ export class AuthorsService {
 
   findOne(id: number) {
     return this.authorRepository.findOneBy({
-      where: {id}
+      where: { id },
     });
   }
 

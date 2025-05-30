@@ -1,16 +1,14 @@
-import { IsDate, IsString, IsInt, min, max, Min, Max } from "class-validator";
+import { IsDate, IsString, IsInt, min, max, Min, Max } from 'class-validator';
 
 export class CreateBookreviewDto {
+  @IsString()
+  content: string;
 
-    @IsString()
-    content: string;
+  @IsInt()
+  @Min(1)
+  @Max(5)
+  rating: number;
 
-    @IsInt()
-    @Min(1)
-    @Max(5)
-    rating: number;
-
-    @IsDate()
-    createdAt:Date;
-
+  @IsDate()
+  createdAt: Date;
 }

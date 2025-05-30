@@ -11,9 +11,18 @@ import { DatabaseModule } from './database/database.module';
 import { ConfigModule } from '@nestjs/config';
 import { SeedModule } from './seed/seed.module';
 
-
 @Module({
-  imports: [ConfigModule.forRoot({isGlobal: true}), ProfilesModule, UsersModule, AuthorsModule, BooksModule, CategoriesModule, BookreviewsModule, DatabaseModule, SeedModule],
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+    ProfilesModule,
+    UsersModule,
+    AuthorsModule,
+    BooksModule,
+    CategoriesModule,
+    BookreviewsModule,
+    DatabaseModule,
+    SeedModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

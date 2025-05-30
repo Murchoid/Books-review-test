@@ -1,25 +1,29 @@
-import { IsBoolean, IsDate, IsEmail, IsNotEmpty, IsString } from "class-validator";
+import {
+  IsBoolean,
+  IsDate,
+  IsEmail,
+  IsNotEmpty,
+  IsString,
+} from 'class-validator';
 
 export class CreateUserDto {
-    @IsString()
-    @IsNotEmpty()
-    name: string;
+  @IsString()
+  @IsNotEmpty()
+  name: string;
 
-    @IsEmail()
-    @IsNotEmpty()
-    email: string
+  @IsEmail()
+  @IsNotEmpty()
+  email: string;
 
-    @IsNotEmpty()
-    password: string
+  @IsNotEmpty()
+  password: string;
 
-    @IsBoolean()
-    isActive: true;
+  @IsBoolean()
+  isActive: true;
 
-    @IsDate()
-    createdat: Date;
+  @IsDate()
+  createdat: Date;
 
-    @IsDate()
-    updatedAt: Date;
-
-
+  @IsDate()
+  updatedAt: Date;
 }

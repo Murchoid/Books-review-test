@@ -10,8 +10,8 @@ import { BookreviewsModule } from './bookreviews.module';
 export class BookreviewsService {
   constructor(
     @InjectRepository(Bookreview)
-    private bookReviewRepository: Repository<BookreviewsModule>
-  ){}
+    private bookReviewRepository: Repository<BookreviewsModule>,
+  ) {}
   create(createBookreviewDto: CreateBookreviewDto) {
     return this.bookReviewRepository.create(createBookreviewDto);
   }
@@ -22,7 +22,7 @@ export class BookreviewsService {
 
   findOne(id: number) {
     return this.bookReviewRepository.findOneBy({
-      where:{id}
+      where: { id },
     });
   }
 

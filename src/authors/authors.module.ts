@@ -5,10 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Author } from './entities/author.entity';
 
 @Module({
-  imports:[
-    AuthorsModule,
-    TypeOrmModule.forFeature([Author])
-  ],
+  imports: [AuthorsModule, TypeOrmModule.forFeature([Author])],
   controllers: [AuthorsController],
   providers: [AuthorsService],
 })

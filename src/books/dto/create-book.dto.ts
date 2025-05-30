@@ -1,17 +1,15 @@
-import { IsBoolean, IsDateString, IsString } from "class-validator";
+import { IsBoolean, IsDateString, IsString } from 'class-validator';
 
 export class CreateBookDto {
+  @IsString()
+  title: string;
 
-    @IsString()
-    title: string;
+  @IsString()
+  description: string;
 
-    @IsString()
-    description: string;
+  @IsDateString()
+  publicationYear: string;
 
-    @IsDateString()
-    publicationYear: string;
-
-    @IsBoolean()
-    isAvailable: boolean;
-
+  @IsBoolean()
+  isAvailable: boolean;
 }
