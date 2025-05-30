@@ -14,13 +14,13 @@ import { SeedModule } from './seed/seed.module';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
+    DatabaseModule,
     ProfilesModule,
     UsersModule,
     AuthorsModule,
     BooksModule,
     CategoriesModule,
     BookreviewsModule,
-    DatabaseModule,
     SeedModule,
   ],
   controllers: [AppController],
